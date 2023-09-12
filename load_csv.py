@@ -8,7 +8,7 @@ def load(path: str) -> pd.DataFrame:
     try:
         if not path:
             raise ValueError("Path cannot be empty")
-        loaded_data = pd.read_csv(path)
+        loaded_data = pd.read_csv(path, header=None)
         if loaded_data.empty:
             print("The file is empty.")
             return None
